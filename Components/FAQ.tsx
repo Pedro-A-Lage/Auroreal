@@ -79,7 +79,7 @@ export function FAQ() {
                         Perguntas Frequentes
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Respondemos as dúvidas mais comuns sobre a venda antecipada
+                        Respondemos as dúvidas mais comuns sobre esta edição limitada
                     </p>
                 </motion.div>
 

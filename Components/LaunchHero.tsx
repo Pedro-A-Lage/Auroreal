@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Check, Star } from 'lucide-react'
-import bookCover from '../assets/livro-lancamento.jpg'
+import bookCover from '../assets/Caminhos para educação de Superdotado.png'
 
 export function LaunchHero() {
     return (

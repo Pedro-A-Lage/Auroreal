@@ -7,7 +7,7 @@ import { FloatingLabelInput } from './ui/FloatingLabelInput'
 import { PasswordStrengthMeter } from './ui/PasswordStrengthMeter'
 import { Badge } from './ui/Badge'
 import { ConfirmDialog } from './ui/ConfirmDialog'
-import bookCover from '../assets/livro-lancamento.jpg'
+import bookCover from '../assets/Caminhos para educação de Superdotado.png'
 
 interface CheckoutModalProps {
     isOpen: boolean;

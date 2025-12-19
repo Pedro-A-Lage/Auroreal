@@ -49,7 +49,7 @@ export function App() {
                                 transition={{ duration: 1.2, delay: 0.1, ease: "easeOut" }}
                                 className="text-xl text-gray-600 max-w-2xl mx-auto"
                             >
-                                Venda antecipada exclusiva — <strong className="text-accent">disponível apenas até 31 de janeiro</strong>
+                                Edição única e limitada — <strong className="text-accent">disponível apenas até 31 de janeiro</strong>
                             </motion.p>
 
                             <motion.div
@@ -61,9 +61,9 @@ export function App() {
                             >
                                 <div className="flex items-center gap-2">
                                     <Calendar className="w-4 h-4 text-accent" />
-                                    <span>Fim da venda antecipada: <strong className="text-primary">31 de janeiro de 2026</strong></span>
+                                    <span>Fim das vendas: <strong className="text-primary">31 de janeiro de 2026</strong></span>
                                 </div>
-                                <span className="text-xs text-gray-400">Preço único • Frete grátis • Sem complicação</span>
+                                <span className="text-xs text-gray-400">Edição limitada • Frete grátis • Após 31/01 não estará mais à venda</span>
                             </motion.div>
                         </div>
 

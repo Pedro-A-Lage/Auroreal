@@ -2,7 +2,7 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, Trash2, ShoppingBag, ArrowRight } from 'lucide-react'
 import { Badge } from './ui/Badge'
-import bookCover from '../assets/livro-lancamento.jpg'
+import bookCover from '../assets/Caminhos para educação de Superdotado.png'
 
 interface Product {
     name: string;

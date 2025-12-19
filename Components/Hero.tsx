@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight, Award, Globe, Star, Calendar } from 'lucide-react'
 import { smoothScrollTo } from '../utils/smoothScroll'
-import bookCover from '../assets/livro-lancamento.jpg'
+import bookCover from '../assets/Caminhos para educação de Superdotado.png'
 import { useCountdown } from '../hooks/useCountdown'
 import { PRESALE } from '../utils/constants'
 
@@ -66,10 +66,11 @@ export function Hero() {
                         transition={{ duration: 1.2, delay: 0.25, ease: 'easeOut' }}
                         className="bg-white rounded-xl p-5 mb-8 shadow-soft border border-gray-100"
                     >
-                        <p className="text-sm text-gray-600 mb-3 font-medium flex items-center gap-2">
+                        <p className="text-sm text-gray-600 mb-1 font-medium flex items-center gap-2">
                             <Calendar className="w-4 h-4 text-accent" />
-                            Lançamento em 31 de janeiro de 2026
+                            Edição limitada — Fim das vendas em 31 de janeiro de 2026
                         </p>
+                        <p className="text-xs text-gray-500 mb-3">Após esta data, o livro não estará mais disponível</p>
                         <div className="grid grid-cols-4 gap-3 text-center">
                             {[
                                 { value: countdown.days, label: 'Dias' },

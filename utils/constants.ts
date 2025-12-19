@@ -33,7 +33,7 @@ export const PRODUCTS = {
             'Envio para todo Brasil',
             'Frete grátis',
         ],
-        delivery: '~45 dias após 31/01/2026',
+        delivery: '~30 dias após 31/01/2026',
         badge: 'E-book grátis',
         checkoutUrl: 'https://www.aurorealeditora.com.br/caminhos-para-a-educacao-de-superdotados-fisico-e-book/p',
     },
@@ -53,7 +53,7 @@ export const PRODUCTS = {
             'Acesso por 1 ano ao conteúdo extra',
             'Frete grátis',
         ],
-        delivery: '~45 dias após 31/01/2026',
+        delivery: '~30 dias após 31/01/2026',
         badges: ['Mais Vendido', 'Melhor Valor'],
         highlighted: true,
         checkoutUrl: 'https://www.aurorealeditora.com.br/caminhos-para-a-educacao-de-superdotados-colecionador/p',
@@ -92,12 +92,16 @@ referência internacional para pais, educadores e profissionais da área.`,
 // Perguntas frequentes
 export const FAQ_ITEMS = [
     {
+        question: 'Por que esta é uma edição única?',
+        answer: 'Este livro terá apenas uma tiragem limitada, disponível exclusivamente até 31 de janeiro de 2026. Após essa data, o livro não estará mais à venda. Esta é sua única oportunidade de adquirir esta obra exclusiva.',
+    },
+    {
         question: 'Quando receberei meu livro físico?',
-        answer: 'O envio do livro físico será realizado até 27 de fevereiro de 2026 OU até 15 dias úteis após o fim da venda antecipada. Você receberá o código de rastreamento por e-mail assim que o livro for despachado.',
+        answer: 'O envio do livro físico será realizado até 27 de fevereiro de 2026 OU até 15 dias úteis após o encerramento das vendas. Você receberá o código de rastreamento por e-mail assim que o livro for despachado.',
     },
     {
         question: 'O e-book é enviado imediatamente?',
-        answer: 'O e-book estará disponível a partir de 31 de janeiro de 2026, data oficial de lançamento. Nessa data, você receberá automaticamente um e-mail com o link para download em formato PDF e EPUB.',
+        answer: 'O e-book estará disponível a partir de 31 de janeiro de 2026. Nessa data, você receberá automaticamente um e-mail com o link para download em formato PDF e EPUB.',
     },
     {
         question: 'Posso parcelar o pagamento?',
