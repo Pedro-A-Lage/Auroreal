@@ -1,0 +1,48 @@
+/* Import Inter with full weight range per brand kit */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+    background-color: #F8F6F3;
+    color: #2C2C2C;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings use Inter per brand kit - with weight variations for hierarchy */
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom selection colors matching brand */
+::selection {
+    background-color: #662D91;
+    color: white;
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+    outline: 2px solid #F7941D;
+    outline-offset: 2px;
+}

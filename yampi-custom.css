@@ -1,0 +1,325 @@
+/* =====================================================
+   AUROREAL BRAND KIT - CSS Customizado para Yampi
+   
+   PALETA DE CORES OFICIAL:
+   - Background: #F8F6F3
+   - Primary (Roxo): #662D91
+   - Accent (Laranja): #F7941D
+   - Muted: #6B6B6B
+   - Text: #2C2C2C
+   
+   TIPOGRAFIA: Inter (toda família - 100 a 900)
+===================================================== */
+
+/* Import fonte Inter - família completa */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ==================== VARIÁVEIS CSS ==================== */
+:root {
+    --auroreal-bg: #F8F6F3;
+    --auroreal-primary: #662D91;
+    --auroreal-primary-100: #E9E4F0;
+    --auroreal-primary-300: #BDAED1;
+    --auroreal-primary-400: #A793C1;
+    --auroreal-primary-600: #502274;
+    --auroreal-primary-800: #29123A;
+    --auroreal-accent: #F7941D;
+    --auroreal-accent-600: #D67D14;
+    --auroreal-muted: #6B6B6B;
+    --auroreal-text: #2C2C2C;
+}
+
+/* ==================== BASE ==================== */
+
+body {
+    background-color: var(--auroreal-bg) !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+    color: var(--auroreal-text) !important;
+}
+
+::selection {
+    background-color: var(--auroreal-primary) !important;
+    color: white !important;
+}
+
+/* ==================== TIPOGRAFIA ==================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+h1 {
+    font-weight: 700 !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600 !important;
+}
+
+/* ==================== HEADER ==================== */
+
+/* Header principal - fundo branco */
+header,
+.header {
+    background-color: white !important;
+}
+
+/* Ícones do header (pessoa, carrinho, etc.) - classe específica do Yampi */
+.rkt-svg,
+.rkt-svg path,
+.cart-icon,
+.cart-icon path,
+header svg,
+header svg path {
+    fill: var(--auroreal-primary) !important;
+}
+
+/* Contador de itens no carrinho */
+.cart-count,
+.cart-badge,
+.minicart-count {
+    background-color: var(--auroreal-accent) !important;
+    color: white !important;
+    font-weight: 700 !important;
+}
+
+/* ==================== NAVEGAÇÃO / MENU ==================== */
+
+/* Menu de categorias - fundo roxo */
+.menu-categories,
+.main-menu,
+.categories-menu,
+.nav-categories {
+    background-color: var(--auroreal-primary) !important;
+}
+
+/* Links do menu de categorias */
+.menu-categories a,
+.main-menu a,
+.categories-menu a {
+    color: white !important;
+    font-weight: 500 !important;
+}
+
+.menu-categories a:hover,
+.main-menu a:hover,
+.categories-menu a:hover {
+    color: var(--auroreal-accent) !important;
+}
+
+/* ==================== BOTÕES ==================== */
+
+/* Container do botão - SEM fundo */
+.holder-buy-button,
+.button-style {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Botão interno com texto - esse sim fica roxo */
+.buy-button-text-icon {
+    background-color: var(--auroreal-primary) !important;
+    color: white !important;
+    border-radius: 8px !important;
+}
+
+.buy-button-text-icon:hover {
+    background-color: var(--auroreal-primary-600) !important;
+}
+
+/* Ícone do carrinho DENTRO do botão - branco */
+.buy-button-text-icon .cart-icon,
+.buy-button-text-icon .cart-icon path,
+.buy-button-text-icon svg,
+.buy-button-text-icon svg path,
+.holder-buy-button .icon,
+.holder-buy-button .icon path {
+    fill: white !important;
+    color: white !important;
+}
+
+/* Ícone dentro do botão de carrinho */
+.holder-buy-button svg path,
+.buy-button-text-icon svg path {
+    fill: white !important;
+}
+
+/* Texto do botão */
+.holder-buy-button .text,
+.buy-button-text-icon .text {
+    color: white !important;
+}
+
+/* ==================== CARRINHO LATERAL ==================== */
+
+/* Botão "Ver carrinho" e "Finalizar compra" */
+.side-cart-button,
+.btn-primary,
+.loader-button.btn-primary,
+button.btn-primary {
+    background-color: var(--auroreal-primary) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+}
+
+.side-cart-button:hover,
+.btn-primary:hover {
+    background-color: var(--auroreal-primary-600) !important;
+}
+
+/* ==================== PRODUTOS ==================== */
+
+/* Nome do produto */
+.product-name {
+    color: var(--auroreal-text) !important;
+    font-weight: 600 !important;
+}
+
+/* Marca */
+.product-brand {
+    color: var(--auroreal-muted) !important;
+}
+
+/* Preço atual */
+.product-actual-price,
+.base-amount {
+    color: var(--auroreal-text) !important;
+    font-weight: 700 !important;
+}
+
+/* Preço antigo riscado */
+.product-old-price {
+    color: var(--auroreal-muted) !important;
+}
+
+/* ==================== BADGES / FLAGS ==================== */
+
+/* Badge Novidade, Frete Grátis, etc. - classe .flag do Yampi */
+span.flag {
+    --flag-bg-color: var(--auroreal-accent) !important;
+    --flag-color: white !important;
+    background-color: var(--auroreal-accent) !important;
+    color: white !important;
+}
+
+/* Badge de desconto */
+.discount-badge,
+.sale-badge {
+    background-color: var(--auroreal-primary) !important;
+    color: white !important;
+}
+
+/* ==================== NEWSLETTER ==================== */
+
+.newsletter,
+.holder-newsletter,
+[class*="newsletter"] {
+    background-color: var(--auroreal-primary) !important;
+    color: white !important;
+}
+
+.newsletter h2,
+.newsletter h3,
+.newsletter p,
+.holder-newsletter h2,
+.holder-newsletter h3,
+.holder-newsletter p,
+[class*="newsletter"] h2,
+[class*="newsletter"] h3,
+[class*="newsletter"] p {
+    color: white !important;
+}
+
+.newsletter input,
+.holder-newsletter input,
+[class*="newsletter"] input {
+    background-color: white !important;
+    color: var(--auroreal-text) !important;
+    border: none !important;
+}
+
+.newsletter button,
+.holder-newsletter button,
+[class*="newsletter"] button {
+    background-color: var(--auroreal-accent) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* ==================== FOOTER ==================== */
+
+footer,
+.footer,
+.holder-footer {
+    background-color: var(--auroreal-primary) !important;
+}
+
+footer a,
+.footer a {
+    color: white !important;
+    transition: color 0.3s ease !important;
+}
+
+footer a:hover,
+.footer a:hover {
+    color: var(--auroreal-accent) !important;
+}
+
+footer h3,
+footer h4,
+.footer h3,
+.footer h4,
+footer .title,
+.footer .title,
+footer .-title,
+.footer .-title {
+    color: white !important;
+}
+
+/* ==================== FORMULÁRIOS ==================== */
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+textarea,
+select {
+    border: 2px solid var(--auroreal-primary-100) !important;
+    border-radius: 8px !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--auroreal-primary) !important;
+    outline: none !important;
+}
+
+/* ==================== SCROLLBAR ==================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--auroreal-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--auroreal-primary-400);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--auroreal-primary);
+}
