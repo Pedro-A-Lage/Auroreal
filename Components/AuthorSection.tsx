@@ -33,7 +33,7 @@ export function AuthorSection() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
                     {/* Author Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}

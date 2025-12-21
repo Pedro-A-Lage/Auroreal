@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Check, Star, Truck, Calendar, BookOpen } from 'lucide-react'
+import { Check, Star, Truck, Calendar, BookOpen, Gift } from 'lucide-react'
 import { Header } from './Components/Header'
 import { Hero } from './Components/Hero'
 import { AboutSection } from './Components/AboutSection'
@@ -10,8 +10,18 @@ import { TestimonialSection } from './Components/social-proof/TestimonialSection
 import { FAQ } from './Components/FAQ'
 import { Badge } from './Components/ui/Badge'
 import { PRODUCTS } from './utils/constants'
+import { GiftPage } from './Components/GiftPage'
 
 export function App() {
+    // Detecta se é página de presente via query param ?presente=1
+    const urlParams = new URLSearchParams(window.location.search)
+    const isGiftPage = urlParams.get('presente') === '1'
+
+    // Se for página de presente, renderiza apenas o GiftPage
+    if (isGiftPage) {
+        return <GiftPage />
+    }
+
     return (
         <div className="min-h-screen bg-background text-primary selection:bg-accent selection:text-white">
             <Header />
@@ -66,6 +76,43 @@ export function App() {
                                 <span className="text-xs text-gray-400">Edição limitada • Frete grátis • Após 31/01 não estará mais à venda</span>
                             </motion.div>
                         </div>
+
+                        {/* Banner Promocional - Destaque */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: false }}
+                            transition={{ duration: 0.8, ease: "easeOut" }}
+                            className="mb-10"
+                        >
+                            <div className="bg-gradient-to-r from-accent via-amber-500 to-accent rounded-2xl p-1 shadow-lg shadow-accent/30">
+                                <div className="bg-gradient-to-r from-accent/95 via-amber-500/95 to-accent/95 rounded-xl px-6 py-4 flex flex-col md:flex-row items-center justify-center gap-4 text-white">
+                                    <motion.div
+                                        animate={{ rotate: [0, -10, 10, -10, 0], scale: [1, 1.1, 1] }}
+                                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+                                        className="bg-white/20 p-3 rounded-full backdrop-blur-sm"
+                                    >
+                                        <Gift className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                                    </motion.div>
+                                    <div className="text-center md:text-left">
+                                        <p className="text-lg md:text-xl font-bold tracking-tight">
+                                            🎁 PROMOÇÃO DE FESTAS — <span className="bg-white/20 px-2 py-0.5 rounded">até 31/12</span>
+                                        </p>
+                                        <p className="text-sm md:text-base font-medium opacity-95">
+                                            Compre o <strong className="underline decoration-2">Colecionador</strong> e ganhe um <strong>e-book extra</strong> para presentear quem você quiser!
+                                        </p>
+                                    </div>
+                                    <motion.a
+                                        href="#card-colecionador"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        className="bg-white text-accent font-bold px-6 py-2 rounded-full text-sm uppercase tracking-wide shadow-md hover:shadow-lg transition-all whitespace-nowrap"
+                                    >
+                                        Ver Oferta
+                                    </motion.a>
+                                </div>
+                            </div>
+                        </motion.div>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
                             {/* Card Digital */}
@@ -156,6 +203,7 @@ export function App() {
 
                             {/* Card Colecionador - PREMIUM */}
                             <motion.div
+                                id="card-colecionador"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: false }}
@@ -176,7 +224,7 @@ export function App() {
 
                                 {/* Pricing */}
                                 <div className="mb-2">
-                                    <p className="text-sm text-white/50 line-through mb-1">De R$ 250,00</p>
+                                    <p className="text-sm text-white/50 line-through mb-1">De R$ 249,90</p>
                                     <div className="flex items-baseline">
                                         <span className="text-lg mr-1 text-white/60 font-light">R$</span>
                                         <span className="text-4xl font-bold tracking-tight">149,90</span>
@@ -194,12 +242,31 @@ export function App() {
                                 </ul>
 
                                 {/* Bonus Section */}
-                                <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-6">
+                                <div className="bg-white/10 border border-white/20 rounded-xl p-4 mb-4">
                                     <p className="font-semibold text-sm mb-1">Bônus: Webinar Exclusivo</p>
                                     <p className="text-xs text-white/70">
                                         Aula gravada com a Dra. Deborah Ruf
                                     </p>
                                 </div>
+
+                                {/* PROMOÇÃO - E-book de Presente */}
+                                <motion.div
+                                    initial={{ scale: 1 }}
+                                    animate={{ scale: [1, 1.02, 1] }}
+                                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
+                                    className="bg-gradient-to-r from-amber-500 to-accent border-2 border-amber-300 rounded-xl p-4 mb-6 relative overflow-hidden"
+                                >
+                                    <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full animate-pulse">
+                                        ATÉ 31/12
+                                    </div>
+                                    <div className="flex items-center gap-2 mb-1">
+                                        <Gift className="w-5 h-5 text-white" />
+                                        <p className="font-bold text-sm text-white">🎁 PROMOÇÃO!</p>
+                                    </div>
+                                    <p className="text-xs text-white/95 font-medium leading-relaxed">
+                                        Ganhe <strong className="text-white">+1 e-book extra</strong> para presentear quem você quiser!
+                                    </p>
+                                </motion.div>
 
                                 <a
                                     href={PRODUCTS.colecionador.checkoutUrl}

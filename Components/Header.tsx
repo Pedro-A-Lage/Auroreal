@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Instagram } from 'lucide-react'
 import logo from '../assets/logo.svg'
 import { navItems } from '../data/siteData'
 import { smoothScrollTo } from '../utils/smoothScroll'
@@ -77,11 +77,19 @@ export function Header() {
                                 key={item.label}
                                 href={item.href}
                                 onClick={(e) => handleScroll(e, item.href)}
-                                className="text-sm font-medium text-[#1a1a1a]/80 hover:text-[#8B2635] transition-colors tracking-wide uppercase cursor-pointer"
+                                className="text-sm font-medium text-primary hover:text-accent transition-colors tracking-wide uppercase cursor-pointer"
                             >
                                 {item.label}
                             </a>
                         ))}
+                        <a
+                            href="https://www.instagram.com/aurorealeditora/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-primary hover:text-accent transition-colors hover:scale-110 transform duration-300"
+                        >
+                            <Instagram size={22} />
+                        </a>
                     </nav>
 
                     {/* Mobile Menu Button */}

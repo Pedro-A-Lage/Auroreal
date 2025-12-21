@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ChevronDown, HelpCircle, MessageCircle } from 'lucide-react'
+import { ChevronDown, HelpCircle, Mail } from 'lucide-react'
 import { FAQ_ITEMS, CONTACT } from '../utils/constants'
 
 // ... imports equal ...
@@ -119,15 +119,13 @@ export function FAQ() {
                             Nossa equipe está pronta para ajudar você
                         </p>
                         <motion.a
-                            href={`https://wa.me/${CONTACT.WHATSAPP_NUMBER}?text=Olá! Tenho uma dúvida sobre a pré-venda do livro.`}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={`mailto:${CONTACT.EMAIL}?subject=Dúvida sobre a edição limitada`}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="inline-flex items-center gap-2 bg-success text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-success/90 transition-all shadow-md hover:shadow-lg"
+                            className="inline-flex items-center gap-2 bg-accent text-white px-8 py-4 rounded-full font-bold uppercase tracking-wide hover:bg-accent/90 transition-all shadow-md hover:shadow-lg"
                         >
-                            <MessageCircle className="w-5 h-5" />
-                            Falar pelo WhatsApp
+                            <Mail className="w-5 h-5" />
+                            Enviar Email
                         </motion.a>
                     </div>
                 </motion.div>

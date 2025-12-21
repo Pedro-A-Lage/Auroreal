@@ -19,9 +19,10 @@ export function Hero() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 1.2, ease: 'easeOut' }}
-                        className="inline-block mb-4 px-4 py-2 text-sm font-semibold tracking-wide text-primary bg-accent/20 rounded-full"
+                        className="inline-flex items-center gap-2 mb-4 px-4 py-2 text-sm font-semibold tracking-wide bg-gradient-to-r from-primary/10 to-accent/10 border border-accent/30 rounded-full shadow-sm"
                     >
-                        Primeiro livro da Auroreal Editora
+                        <Star className="w-4 h-4 text-accent fill-accent" />
+                        <span className="text-primary">Primeiro livro da Auroreal Editora</span>
                     </motion.span>
 
                     <motion.h1
@@ -29,9 +30,11 @@ export function Hero() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: false, margin: "-50px" }}
                         transition={{ duration: 1.2, delay: 0.1, ease: 'easeOut' }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight mb-4 tracking-tight"
+                        className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 tracking-tight"
                     >
-                        Caminhos para a educação de superdotados
+                        <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
+                            Caminhos para a educação de superdotados
+                        </span>
                     </motion.h1>
 
                     {/* Author */}
@@ -43,8 +46,6 @@ export function Hero() {
                         className="text-lg text-gray-600 mb-4 font-medium"
                     >
                         por <span className="text-primary font-semibold">Deborah L. Ruf, Ph.D.</span>
-                        <br />
-                        <span className="text-sm text-accent">Prefácio da Dra. Olzeni Ribeiro</span>
                     </motion.p>
 
                     <motion.p

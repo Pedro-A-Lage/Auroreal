@@ -1,7 +1,7 @@
 // Configurações de contato
 export const CONTACT = {
-    WHATSAPP_NUMBER: '5531998940402',
-    EMAIL: 'contato@auroreal.com.br',
+    WHATSAPP_NUMBER: '5548991766066',
+    EMAIL: 'pedro040288@gmail.com',
     INSTAGRAM: '@aurorealeditora',
 } as const;
 
@@ -33,7 +33,7 @@ export const PRODUCTS = {
             'Envio para todo Brasil',
             'Frete grátis',
         ],
-        delivery: '~30 dias após 31/01/2026',
+        delivery: '~27 dias após 31/01/2026',
         badge: 'E-book grátis',
         checkoutUrl: 'https://www.aurorealeditora.com.br/caminhos-para-a-educacao-de-superdotados-fisico-e-book/p',
     },
@@ -42,8 +42,8 @@ export const PRODUCTS = {
         name: 'Caminhos para a educação de superdotados - Colecionador',
         price: 149.90,
         priceFormatted: 'R$ 149,90',
-        originalPrice: 250,
-        originalPriceFormatted: 'R$ 250,00',
+        originalPrice: 249.90,
+        originalPriceFormatted: 'R$ 249,90',
         discount: 40,
         type: 'colecionador' as const,
         features: [
@@ -53,7 +53,7 @@ export const PRODUCTS = {
             'Acesso por 1 ano ao conteúdo extra',
             'Frete grátis',
         ],
-        delivery: '~30 dias após 31/01/2026',
+        delivery: '~27 dias após 31/01/2026',
         badges: ['Mais Vendido', 'Melhor Valor'],
         highlighted: true,
         checkoutUrl: 'https://www.aurorealeditora.com.br/caminhos-para-a-educacao-de-superdotados-colecionador/p',
