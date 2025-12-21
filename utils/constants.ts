@@ -1,7 +1,7 @@
 // Configurações de contato
 export const CONTACT = {
     WHATSAPP_NUMBER: '5548991766066',
-    EMAIL: 'pedro040288@gmail.com',
+    EMAIL: 'contato@aurorealeditora.com.br',
     INSTAGRAM: '@aurorealeditora',
 } as const;
 
