@@ -1,0 +1,36 @@
+name: Merge Remover Promocao
+
+# Executa às 03:00 UTC de 01/01/2026 (00:00 no horário de Brasília)
+on:
+  schedule:
+    - cron: '0 3 1 1 *'  # Minuto 0, Hora 3 UTC, Dia 1, Mês 1 (Janeiro)
+  workflow_dispatch:  # Permite executar manualmente para teste
+
+jobs:
+  merge-promocao:
+    runs-on: ubuntu-latest
+    
+    # Só executa em 2026 (para evitar execuções em anos futuros)
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && contains(github.event.schedule, '0 3 1 1'))
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+      - name: Merge remover-promocao into main
+        run: |
+          git checkout main
+          git merge origin/remover-promocao --no-ff -m "Remove promoção de fim de ano - Merge automático 01/01/2026"
+          git push origin main
+
+      - name: Cleanup - Delete the branch
+        run: |
+          git push origin --delete remover-promocao || true
