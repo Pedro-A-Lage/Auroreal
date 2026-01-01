@@ -77,43 +77,6 @@ export function App() {
                             </motion.div>
                         </div>
 
-                        {/* Banner Promocional - Destaque */}
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: false }}
-                            transition={{ duration: 0.8, ease: "easeOut" }}
-                            className="mb-10"
-                        >
-                            <div className="bg-gradient-to-r from-accent via-amber-500 to-accent rounded-2xl p-1 shadow-lg shadow-accent/30">
-                                <div className="bg-gradient-to-r from-accent/95 via-amber-500/95 to-accent/95 rounded-xl px-6 py-4 flex flex-col md:flex-row items-center justify-center gap-4 text-white">
-                                    <motion.div
-                                        animate={{ rotate: [0, -10, 10, -10, 0], scale: [1, 1.1, 1] }}
-                                        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-                                        className="bg-white/20 p-3 rounded-full backdrop-blur-sm"
-                                    >
-                                        <Gift className="w-8 h-8 md:w-10 md:h-10 text-white" />
-                                    </motion.div>
-                                    <div className="text-center md:text-left">
-                                        <p className="text-lg md:text-xl font-bold tracking-tight">
-                                            🎁 PROMOÇÃO DE FESTAS — <span className="bg-white/20 px-2 py-0.5 rounded">até 31/12</span>
-                                        </p>
-                                        <p className="text-sm md:text-base font-medium opacity-95">
-                                            Compre o <strong className="underline decoration-2">Colecionador</strong> e ganhe um <strong>e-book extra</strong> para presentear quem você quiser!
-                                        </p>
-                                    </div>
-                                    <motion.a
-                                        href="#card-colecionador"
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.98 }}
-                                        className="bg-white text-accent font-bold px-6 py-2 rounded-full text-sm uppercase tracking-wide shadow-md hover:shadow-lg transition-all whitespace-nowrap"
-                                    >
-                                        Ver Oferta
-                                    </motion.a>
-                                </div>
-                            </div>
-                        </motion.div>
-
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
                             {/* Card Digital */}
                             <motion.div
@@ -249,24 +212,6 @@ export function App() {
                                     </p>
                                 </div>
 
-                                {/* PROMOÇÃO - E-book de Presente */}
-                                <motion.div
-                                    initial={{ scale: 1 }}
-                                    animate={{ scale: [1, 1.02, 1] }}
-                                    transition={{ duration: 2, repeat: Infinity, repeatDelay: 4 }}
-                                    className="bg-gradient-to-r from-amber-500 to-accent border-2 border-amber-300 rounded-xl p-4 mb-6 relative overflow-hidden"
-                                >
-                                    <div className="absolute top-2 right-2 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full animate-pulse">
-                                        ATÉ 31/12
-                                    </div>
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <Gift className="w-5 h-5 text-white" />
-                                        <p className="font-bold text-sm text-white">🎁 PROMOÇÃO!</p>
-                                    </div>
-                                    <p className="text-xs text-white/95 font-medium leading-relaxed">
-                                        Ganhe <strong className="text-white">+1 e-book extra</strong> para presentear quem você quiser!
-                                    </p>
-                                </motion.div>
 
                                 <a
                                     href={PRODUCTS.colecionador.checkoutUrl}
